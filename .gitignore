@@ -1,0 +1,47 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+# (Keep your chosen lockfile; remove this line if you commit package-lock.json)
+
+# Vite / Build
+dist/
+.vite/
+*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Env files (keep the example)
+.env
+.env.*
+!.env.example
+
+# Coverage (Vitest)
+coverage/
+
+# Playwright artifacts (keep baseline snapshots for visual tests)
+playwright-report/
+test-results/
+# NOTE: Do NOT ignore baseline snapshots created next to specs (e.g. `*-snapshots/`).
+# They should be committed for stable visual regression.
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Optional caches
+.cache/
+tmp/
+
+.github/

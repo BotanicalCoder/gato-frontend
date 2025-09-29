@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-[color:var(--tw-bg,theme(colors.bg))] text-slate-50 font-sans;
+    background-image: radial-gradient(1200px 800px at 30% 10%, #151517, transparent);
+  }
+}
+
+/* Arcade heading glow */
+@layer utilities {
+  .arcade-title {
+    @apply font-arcade uppercase tracking-tight;
+    text-shadow: 0 2px 0 #000, 0 0 8px rgba(239,68,68,.5);
+  }
+  .btn-arcade {
+    @apply inline-flex items-center justify-center rounded-xl font-bold text-white
+           px-3 py-2 bg-gradient-to-b from-red-500 to-red-600 shadow-arcade-red
+           transition-transform active:translate-y-0.5;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-xl font-semibold text-slate-100
+           px-3 py-2 bg-gradient-to-b from-slate-700 to-slate-800 shadow
+           transition-transform active:translate-y-0.5;
+  }
+  .card {
+    @apply rounded-2xl border border-zinc-800 bg-gradient-to-b from-panel to-panel2 p-5 shadow-card-deck;
+  }
+  .input {
+    @apply w-full rounded-xl border border-zinc-800 bg-zinc-900 px-3 py-2 text-slate-50 outline-none;
+  }
+  .label {
+    @apply mb-1 block text-xs text-slate-400;
+  }
+  .badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900 px-3 py-2 text-sm;
+  }
+  .dot {
+    @apply h-2 w-2 rounded-full bg-yellow-300;
+  }
+  .kpi {
+    @apply flex items-center gap-3 rounded-xl border border-zinc-800 bg-zinc-900 px-3 py-2;
+  }
+  .todo {
+    @apply flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-900 px-3 py-2;
+  }
+  .container-page {
+    @apply mx-auto max-w-[1040px] p-4;
+  }
+  .brand-badge {
+    @apply grid h-8 w-8 place-items-center rounded-md bg-gradient-to-br from-red-600 to-red-500 shadow-[0_6px_0_#4c0519,0_0_24px_rgba(239,68,68,.35)] font-extrabold;
+  }
+  .link {
+    @apply text-slate-50/90 hover:text-slate-50;
+  }
+  .nav {
+    @apply sticky top-0 z-10 flex items-center justify-between border-b border-zinc-800 bg-gradient-to-b from-black/90 to-black/60 px-4 py-3 backdrop-blur;
+  }
+}
