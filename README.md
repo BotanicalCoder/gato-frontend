@@ -105,7 +105,7 @@ We highly appreciate contributions to the Gato Frontend project! If you're inter
 
 ### **Author Info**
 
-- **Your Name**
+- **Chibueze Evans Okocha**
   - LinkedIn: [Chibueze Evans Okocha](https://www.linkedin.com/in/chibueze-okocha-749a291a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
   - Twitter: [@chisageo](https://twitter.com/chisageo)
 
