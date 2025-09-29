@@ -42,35 +42,45 @@ export default function Login() {
         )}
         <form className="space-y-3" onSubmit={onSubmit}>
           <div>
-            <label className="label">Email</label>
+            <label className="label" htmlFor="email">
+              Email
+            </label>
             <input
+              id="email"
+              name="email"
               className="input"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              autoComplete="email"
+              inputMode="email"
+              spellCheck={false}
+              autoCapitalize="off"
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+              title="Enter a valid email address (e.g. user@example.com)"
             />
           </div>
-          {/* <div>
-            <label className="label">Password</label>
-            <input
-              className="input"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div> */}
+
           <div>
-            <label className="label">Password</label>
+            <label className="label" htmlFor="password">
+              Password
+            </label>
 
             <div className="relative">
               <input
+                id="password"
+                name="password"
                 className="input pr-10"
                 type={showPwd ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                minLength={8}
+                maxLength={128}
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}"
+                title="At least 8 characters, with upper & lower case letters and a number"
+                autoComplete="current-password"
                 aria-label="Password"
               />
 
@@ -80,7 +90,7 @@ export default function Login() {
                 aria-label={showPwd ? "Hide password" : "Show password"}
                 aria-pressed={showPwd}
                 className="absolute inset-y-0 right-2 my-auto h-8 px-2 rounded-md text-xs font-semibold
-                 bg-gradient-to-b from-slate-700 to-slate-800 text-slate-100"
+                   bg-gradient-to-b from-slate-700 to-slate-800 text-slate-100"
               >
                 {showPwd ? "Hide" : "Show"}
               </button>
