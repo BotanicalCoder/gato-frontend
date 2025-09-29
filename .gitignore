@@ -43,3 +43,5 @@ Thumbs.db
 # Optional caches
 .cache/
 tmp/
+
+.github/
